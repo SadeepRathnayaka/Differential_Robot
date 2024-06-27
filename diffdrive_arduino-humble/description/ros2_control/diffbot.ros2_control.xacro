@@ -32,6 +32,10 @@
 
   </xacro:macro> -->
 
+
+  <xacro:macro name="diffbot_ros2_control" params="name prefix">
+
+  </xacro:macro>
   <ros2_control name="RealRobot" type="system">
     <hardware>
         <plugin>diffdrive_arduino/DiffDriveArduino</plugin>
@@ -61,5 +65,7 @@
     <state_interface name="velocity"></state_interface>
 </joint>
   </ros2_control>
+
+</xacro:macro>
 
 </robot>
