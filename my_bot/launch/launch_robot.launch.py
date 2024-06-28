@@ -76,7 +76,4 @@ def generate_launch_description():
         delayed_diff_drive_spawner,
         delayed_joint_broad_spawner,
         twist_to_twist_stamped
-        # controller_manager,
-        # diff_drive_spawner,
-        # joint_broad_spawner
     ])
