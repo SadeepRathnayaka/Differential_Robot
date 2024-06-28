@@ -11,7 +11,6 @@ find_package(rclcpp REQUIRED)
 find_package(geometry_msgs REQUIRED)
 
 add_executable(twist_to_twist_stamped src/twist_to_twist_stamped.cpp)
-add_executable(twist_to_twist_stamped_robot src/twist_to_twist_stamped_robot.cpp)
 
 target_include_directories(twist_to_twist_stamped PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
@@ -23,19 +22,7 @@ ament_target_dependencies(
   "geometry_msgs"
   )
 
-  target_include_directories(twist_to_twist_stamped_robot PUBLIC
-  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-  $<INSTALL_INTERFACE:include>)
-target_compile_features(twist_to_twist_stamped_robot PUBLIC cxx_std_14)
-ament_target_dependencies(
-  twist_to_twist_stamped_robot
-  "rclcpp" 
-  "geometry_msgs"
-  )
-
-install(TARGETS 
-  twist_to_twist_stamped
-  twist_to_twist_stamped_robot
+install(TARGETS twist_to_twist_stamped
   DESTINATION lib/${PROJECT_NAME})
 
 if(BUILD_TESTING)
