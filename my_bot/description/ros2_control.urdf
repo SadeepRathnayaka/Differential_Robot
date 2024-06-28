@@ -56,11 +56,11 @@
 
     </ros2_control>  -->
 
-    <gazebo>
+    <!-- <gazebo>
         <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
           <robot_param>robot_description</robot_param>
           <robot_param_node>robot_state_publisher</robot_param_node>
           <parameters>$(find my_bot)/config/my_controllers.yaml</parameters>
         </plugin>
-    </gazebo>
+    </gazebo> -->
 </robot>
