@@ -63,13 +63,19 @@ def generate_launch_description():
         )
     )
 
+    twist_to_twist_stamped = Node(
+        package="twist_to_twist_stamped",
+        executable="twist_to_twist_stamped",
+    )
+
 
     # Launch them all!
     return LaunchDescription([
         rsp,
         delayed_controller_manager,
         delayed_diff_drive_spawner,
-        delayed_joint_broad_spawner
+        delayed_joint_broad_spawner,
+        twist_to_twist_stamped
         # controller_manager,
         # diff_drive_spawner,
         # joint_broad_spawner
