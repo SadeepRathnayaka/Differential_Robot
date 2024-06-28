@@ -1,6 +1,6 @@
 controller_manager:
   ros__parameters:
-    update_rate: 100
+    update_rate: 50
     # use_sim_time: true
 
     diff_cont:
@@ -11,13 +11,13 @@ controller_manager:
 
 diff_cont:
   ros__parameters:
-    publish_rate: 100.0
+    publish_rate: 50.0
 
     odom_frame_id: odom
     base_frame_id: base_link
 
-    position_feedback: true
-    open_loop: false
+    position_feedback: false
+    open_loop: true
     enable_odom_tf: true
 
     left_wheel_names: [left_wheel_joint]
