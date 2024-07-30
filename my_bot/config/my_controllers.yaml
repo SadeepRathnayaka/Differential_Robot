@@ -16,8 +16,8 @@ diff_cont:
     odom_frame_id: odom
     base_frame_id: base_link
 
-    position_feedback: false
-    open_loop: true
+    # position_feedback: false
+    # open_loop: true
     enable_odom_tf: true
 
     left_wheel_names: [left_wheel_joint]
